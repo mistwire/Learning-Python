@@ -1,2 +1,2 @@
 # AutomateTheBoringStuffPython
-notes &amp; programs from the Al Sweigart book
+# notes & programs from the Al Sweigart book
