@@ -23,13 +23,14 @@ print(dir(t))
 
 #Tuples and Assignment - can put a tuple on the left hand side of an assignment statement
 (x,y) = (4,'fred')
+
 print(y)
 print(x,y)
 
 #Tuples and Dictionaries:
-d = dict()
-d['csev'] = 2
-d['cwilly'] = 4
+d = dict() #create an empty dictionary
+d['csev'] = 2 #add a key value pair 
+d['cwilly'] = 4  #add another key value pair 
 for (k,v) in d.items():
     print(k,v)
 
@@ -42,10 +43,11 @@ print((0,1,20000) <(0,3,4)) #comes back true because of [1]
 print(('Jones', 'Sally') < ('Jones', 'Sam')) #comes back true because of 1st 'l' in Sally is less than m in Sam
 
 #Sorting lists of Tuples:
-d = {'a':10, 'c': 22, 'b':1}
-print(d.items())
-print(sorted(d.items()))
+d = {'a':10, 'c': 22, 'b':1} # create your dictionary
+print(d.items()) # sorting will come out as whatever because it's a dictionary
+print(sorted(d.items())) # sorted will sort by keys (if all keys are the same it'll sort by values)
 
+#Using sorted()
 t = sorted(d.items())
 t
 for (k,v) in sorted(d.items()):
