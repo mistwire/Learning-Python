@@ -63,7 +63,3 @@ print(tmp)
 tmp = sorted(tmp, reverse=True)
 print(tmp)
 
-
-
-
-
