@@ -82,3 +82,8 @@ lst = sorted(lst, reverse=True)
 for val,key in lst[:10]:
     print(key,val)
 
+
+#Even shorter version:
+print(sorted ( [(v,k) for k,v in c.items()]))
+
+# http://wiki.python.org/moin/HowTo/Sorting
