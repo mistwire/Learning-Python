@@ -51,7 +51,8 @@ print(sorted(d.items())) # sorted will sort by keys (if all keys are the same it
 t = sorted(d.items())
 t
 for (k,v) in sorted(d.items()):
-    print(k,v)
+    print(k,v) #print key then value
+    print(v,k) #print value then key
 
 #Sort by value instead of key:
 c={'a':10, 'b':1, 'c':22}
@@ -62,4 +63,22 @@ print(tmp)
 
 tmp = sorted(tmp, reverse=True)
 print(tmp)
+
+#Print top 10 most common words in a file
+fhand = open('romeo.txt')
+counts = dict()
+for line in fhand:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word,0) + 1 #know this idiom!
+
+lst = list()
+for key,val in counts.items():
+    newtup = (val, key)
+    lst.append(newtup)
+
+lst = sorted(lst, reverse=True)
+
+for val,key in lst[:10]:
+    print(key,val)
 
