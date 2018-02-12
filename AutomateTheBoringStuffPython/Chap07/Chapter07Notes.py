@@ -39,8 +39,6 @@ batRegex = re.compile(r'Bat(man|mobile|copter|bat)')
 mo = batRegex.search("Batman's Batmobile lost a wheel")
 print(mo.group()) #will print out 'Batman' but not 'Batmobile'
 
-mo = batRegex.findall("Batman's Batmobile lost a wheel")
-print(mo) 
 
 
 
