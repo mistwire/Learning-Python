@@ -1,4 +1,4 @@
-# AutomateTheBoringStuffPython
+# Automate The Boring Stuff with Python
 # notes & programs from the Al Sweigart book/videos 
 http://inventwithpython.com/
 
