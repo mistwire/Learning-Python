@@ -14,3 +14,4 @@ for instance in instances_to_delete:
     conn.stop_instances(instance.id)
 
 
+  
