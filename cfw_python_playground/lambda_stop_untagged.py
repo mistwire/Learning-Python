@@ -13,5 +13,5 @@ instances_to_delete = [to_del for to_del in all_instances if to_del.id not in [i
 for instance in instances_to_delete:
     conn.stop_instances(instance.id)
 
-
+ 
   
