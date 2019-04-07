@@ -47,4 +47,3 @@ print(x.count(5)) #returns 3
 print(x.index(5)) #returns 7
 
 # You can also slice tuples
-

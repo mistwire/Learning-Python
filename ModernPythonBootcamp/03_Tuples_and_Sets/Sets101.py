@@ -45,8 +45,12 @@ numbers_set.clear()
 print(numbers_set)
 
 # Set Math:
+#"add" sets together without duplicates. '|' = set unions
+math_students = {'Matthew', 'Helen', 'Prashant', 'Chris', 'James', 'Aparna'}
+biology_students = {'Jane', 'Chris', 'Charlotte', 'James', 'Oliver', "Mesut", 'Matthew', 'Hunter'}
+print(math_students | biology_students) # a set of all students without duplicates
 
-
+print(math_students & biology_students) # a set of all students in both classes
 
 
 
