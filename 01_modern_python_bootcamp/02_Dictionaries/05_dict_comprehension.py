@@ -17,7 +17,7 @@ print(combo)
 
 #count all the letters in a string and return it as a dictionary:
 def multiple_letter_count(a_string):
-    return {k:a_string.count(k) for k in a_string}
+    return {letter:a_string.count(letter) for letter in a_string}
     pass
 
 print(multiple_letter_count("chrisovalandis"))
