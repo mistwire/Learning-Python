@@ -37,9 +37,4 @@ print(sorted(colors))
 colors.sort()
 print('\nPrinting colors using sort method with reverse=True')
 colors.sort(reverse=True)
-print(colors
-
-#
-
-
-)
+print(colors)
