@@ -38,3 +38,25 @@ colors.sort()
 print('\nPrinting colors using sort method with reverse=True')
 colors.sort(reverse=True)
 print(colors)
+
+
+# Copying a list:
+# use new_list = old_list[:] 
+# new_list = old_list doesn't work because they are both referencing the same list
+my_foods = ['sushi', 'pizza', 'cheeseburger']
+kim_food = my_foods[:]
+
+kim_food.append('ice cream')
+my_foods.append('ramen')
+
+print(f'My favorite foods are \n {my_foods}')
+print(f"Kim's favorite foods are \n {kim_food}")
+
+# Checking that a list is not empty:
+requested_toppings = []
+if requested_toppings: # Checks for the truthiness of the list, if empty it is False
+    for requested_topping in requested_toppings:
+        print(f"Adding {requested_topping}.")
+    print("\nFinished making your pizza!")
+else:
+    print("Are you sure you want a plain pizza?")
