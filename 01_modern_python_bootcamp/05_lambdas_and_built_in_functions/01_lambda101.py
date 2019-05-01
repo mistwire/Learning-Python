@@ -14,7 +14,7 @@ def square(num): return num * num
 # This also does the same thing:
 square2 = lambda num: num * num
 # Typically you don't store the result in a variable, this is for demo purposes
-print(square2(9))
+print(square2(7))
 
 add = lambda a,b: a + b
 
