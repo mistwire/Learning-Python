@@ -17,6 +17,10 @@ print(cat)
 
 print(instructor['name'])
 
+
+# get from dict
+
+
 # print(instructor['thing'])  #this will create a KeyError
 
 artist = {
