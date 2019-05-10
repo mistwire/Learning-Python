@@ -60,3 +60,7 @@ if requested_toppings: # Checks for the truthiness of the list, if empty it is F
     print("\nFinished making your pizza!")
 else:
     print("Are you sure you want a plain pizza?")
+
+
+
+# This is a good cheat sheet https://www.learnpython.dev/ 
