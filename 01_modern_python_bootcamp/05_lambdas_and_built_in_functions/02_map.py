@@ -1,10 +1,10 @@
 # map
 # a standard function that accepts at least 2 arguments: 
-# 1. a function or a lambda
+# 1. a function (usually a lambda)
 # 2. an 'iterable' (list, string, dict, set, tuple)
 # runs the function/lambda for each value in the iterable and returns a map object which can be converted into another data structure
 nums = [2, 4, 6, 8, 10]
-print(nums)
+print(nums) #prints the map object, not the manipluated values
 
 doubles = map(lambda x: x*2, nums)
 print(doubles) # get back a map object that you can iterate over
@@ -24,6 +24,14 @@ people = ["Darcy", "Christina", "Dana", "Annabel"]
 
 peeps = map(lambda name: name.upper(), people)
 print(list(peeps))
+
+names = [
+    {'first':'Rusty', 'last':'Steele'}, 
+    {'first':'Chris', 'last':'Williams'}, 
+    {'first':'Blue', 'last':'Steele'}
+]
+first_names = list(map(lambda x: x['first'], names))
+print(first_names)
 
 # decrement list - define a function that takes a list of numbers and decrements each value by 1
 def decrement_list(a_list):
