@@ -37,4 +37,22 @@ usernames = list(map(lambda user: user["username"].upper(),
 usernames2 = [user["username"].upper() for user in users if not user["tweets"]]
 print(usernames2)
 
+# combine filter and map given a list of names:
+names = ['Lassie', 'Chris', 'Rusty', 'Colt']
+# return a new list with the string 'Your instructor is ' + each value in array... but only if the val < 5 characters!
+
+print(list(map(lambda name: f"Your instructor is {name}", 
+	filter(lambda value: len(value) <= 5, names)))) #this is the collection that map is running on, a filter on names list
+
+
+print(list(map(lambda user: user["username"].upper(),  #creates list of the username in uppercase
+	filter(lambda u: not u['tweets'], users))))        # filters for users that have 0 tweets & passing into map
+
+
+# OR just do a list comprehension
+
+print([f"your instructor is {name}" for name in names if len(name) <= 5])
+
+print([user['username'].upper() for user in users if not user["tweets"]])
+
 
