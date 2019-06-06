@@ -1,0 +1,2 @@
+raise ValueError('invalid value')
+
