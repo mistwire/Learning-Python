@@ -1,12 +1,12 @@
 # _name   <-- convention to let devs know that this is a private variable/property
-# __name 
-# __name__
+# __name  <-- if you use 2 underscores, Python will behind the scenes change the name of the attribute (i.e. 'name mangling')
+# __name__ <-- don't define methods with dunderscores until later (when we know what we are doing)
 
 
 class Person:
     def __init__(self):
         self.name = "Tony"
-        self._secret = "hi!"
+        self._secret = "hi!" 
         self.__msg = "I like turtles!"
 
 p = Person()
