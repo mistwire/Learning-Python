@@ -1,1 +1,1 @@
-Code samples from the 
+Code samples from https://www.packtpub.com/application-development/modern-python-standard-library-cookbook  
