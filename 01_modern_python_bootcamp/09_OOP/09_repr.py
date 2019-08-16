@@ -1,5 +1,5 @@
-# A more common (but advanced) example of class methods
-
+# String Representation __repr__
+# Is one of several methods that provide a nicer string representation:
 
 class User:
 
@@ -21,6 +21,9 @@ class User:
         self.age = age
         User.active_users += 1 # this will increment active_users any time a User is initialized now.
 
+    def __repr__(self): # A customer representation (instead of the __main__ + memory block that we normally get)
+        return f"{self.first} is {self.age}"
+
     def logout(self):
         User.active_users -= 1
         return f"{self.first} has logged out"
@@ -41,21 +44,7 @@ class User:
         self.age += 1
         return f"Happy {self.age}th, {self.first}"
 
-# Say we have data that is arriving in a not formatted (but common) format like "Tom, Jones, 89"
+tom = User.from_string("Tom, Jones, 89")
 
-user1 = User.from_string("Tom, Jones, 89")
-print(user1.first)
-print(user1.full_name())
-print(user1.birthday())
-
-
-
-
-
-
-
-# Another example is dict.fromkeys().  
-# (dict is a class even though it's not capitalized)
-
-user = dict.fromkeys(['name', 'age', 'city'], 'unknown')
-print(user)
+print(tom) # this will reference the __repr__ 
+# Remark out lines 24-25 & run to see the difference
