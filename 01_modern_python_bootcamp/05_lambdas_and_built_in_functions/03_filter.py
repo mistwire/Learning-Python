@@ -1,3 +1,4 @@
+# Just like map, you pass in a lambda (or function) and an iterable
 # There is a lambda for each value in the iterable
 # Returns filter object which can be converted into other iterables
 # The object contains only the values that return True to the lambda

@@ -7,6 +7,10 @@ nums = [2, 4, 6, 8, 10]
 print(nums) #prints the map object, not the manipluated values
 
 doubles = map(lambda x: x*2, nums)
+'''Syntax:
+map(lambda parameter:expression, iterable)
+'''
+
 print(doubles) # get back a map object that you can iterate over
 for num in doubles:
     print(num)
