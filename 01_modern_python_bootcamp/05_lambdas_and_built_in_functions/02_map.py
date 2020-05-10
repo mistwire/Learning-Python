@@ -34,7 +34,7 @@ names = [
     {'first':'Chris', 'last':'Williams'}, 
     {'first':'Blue', 'last':'Steele'}
 ]
-first_names = list(map(lambda x: x['first'], names))
+first_names = list(map(lambda x: x['first'] + ' ' + x['last'], names))
 print(first_names)
 
 # decrement list - define a function that takes a list of numbers and decrements each value by 1
