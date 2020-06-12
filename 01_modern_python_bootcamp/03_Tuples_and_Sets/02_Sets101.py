@@ -1,6 +1,18 @@
 #Sets are an unordered collection of data that does not have duplicate values
 #Useful if you have data where you don't care about ordering, keys or values, & you don't want duplicates
 
+#empty Lists
+empty_list = []
+empyt_list = list()
+
+#empty Tuple
+empty_tuple = ()
+empty_tuple = tuple()
+
+#empty Set
+empty_set = {} # this is wrong, this is a dictionary
+empty_set = set()
+
 s = set({1,2,3,4,5,5,5})
 print(s) 
 s = {1,2,'a', 'b', 23.33334}
@@ -53,4 +65,17 @@ print(math_students | biology_students) # a set of all students without duplicat
 print(math_students & biology_students) # a set of all students in both classes
 
 
+friends = ['John','Michael','Terry','Eric','Graham']
+friends_tuple = ('John','Michael','Terry','Eric','Graham')
+friends_set = {'John','Michael','Terry','Eric','Graham','Eric'}
+my_friends_set = {'Reg','Loretta','Colin','Eric','Graham'}
+
+# intersection method gives you the values that are in 2 different sets:
+print(friends_set.intersection(my_friends_set))
+
+# difference method gives you the values that are not in both sets:
+print(friends_set.difference(my_friends_set))
+
+# union will add 2 sets togther:
+print(friends_set.union(my_friends_set)) 
 
