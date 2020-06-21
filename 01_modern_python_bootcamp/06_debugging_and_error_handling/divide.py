@@ -12,7 +12,7 @@
 def divide(a,b):
 	try:
 		result = a/b
-	except (ZeroDivisionError, TypeError) as err:
+	except TypeError:
 		print("Something went wrong!")
 		print(err)
 	else:

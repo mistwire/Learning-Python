@@ -2,9 +2,10 @@
 # a standard function that accepts at least 2 arguments: 
 # 1. a function (usually a lambda)
 # 2. an 'iterable' (list, string, dict, set, tuple)
-# runs the function/lambda for each value in the iterable and returns a map object which can be converted into another data structure
+# runs the function/lambda for each value in the iterable and 
+# returns a map object which can be converted into another data structure
 nums = [2, 4, 6, 8, 10]
-print(nums) #prints the map object, not the manipluated values
+print(nums)
 
 doubles = map(lambda x: x*2, nums)
 '''Syntax:
@@ -12,6 +13,7 @@ map(lambda parameter:expression, iterable)
 '''
 
 print(doubles) # get back a map object that you can iterate over
+
 for num in doubles:
     print(num)
 

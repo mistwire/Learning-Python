@@ -27,11 +27,23 @@ print(list(zip(*five_by_two)))
 
 
 # more complex zip examples:
-
+# 3 lists:
 midterms = [80, 91, 78]
 finals = [98, 89, 53]
 students = ['dan', 'ang', 'kate']
+# Make a structure that looks like this: {'dan': 98, 'ang': 91, 'kate': 78}
+# Throw out lowest score & avg the two others 
 
-# final_grades = {'dan': 98, 'ang': 91, 'kate': 78}
+# with Dict comprehension:
+final_grades = [pair for pair in zip(midterms, finals)]
+print(final_grades)
 
+# now find max
+final_grades = [max(pair) for pair in zip(midterms, finals)]
+print(final_grades)
 
+# now turn it into a dict & add student name:
+final_grades = {pair[0]:max(pair[1], pair[2]) for pair in zip(students, midterms, finals)}
+print(final_grades)
+
+# now with a lambda and map
