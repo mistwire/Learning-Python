@@ -10,16 +10,16 @@ throws (cannot divide by 0), and return 0"""
 def divide_numbers(numerator, denominator):
     try:
         int(numerator)
-    except TypeError as err:
-        print(err)
+    except ValueError:
+        raise ValueError
     try:
         int(denominator)
-    except TypeError as err:
-        print(err)
-
-    return numerator / denominator
+    except ValueError:
+        raise ValueError
+    else:
+        return numerator / denominator
 
 
 
 print(divide_numbers(10,5))
-print(divide_numbers('1',5))
+print(divide_numbers('hi',5))
