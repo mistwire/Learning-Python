@@ -7,17 +7,31 @@ throws (cannot divide by 0), and return 0"""
 
 
 
+# def divide_numbers(numerator, denominator):
+#     try:
+#         int_numerator = int(numerator)
+ 
+#        int_denominator = int(denominator)
+#     except ValueError:
+#         if numerator or denominator == str:
+#             raise ValueError("Cannot be a string!")
+#     try:
+#         result = int_numerator/int_denominator
+#     except ZeroDivisionError:
+#         if int_denominator == 0:
+#             return 0
+#     return result
+
 def divide_numbers(numerator, denominator):
     try:
-        int(numerator)
+        return int(numerator)/int(denominator)
     except ValueError:
-        raise ValueError
-    try:
-        int(denominator)
-    except ValueError:
-        raise ValueError
-    else:
-        return numerator / denominator
+        raise
+    except ZeroDivisionError:
+        return 0
+
+
+
 
 
 
