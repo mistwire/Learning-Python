@@ -1,6 +1,6 @@
 # now we're going to talk about instance methods
 # this is where OOP becomes a lot more useful than just organizing data
-# instance methods are different from class methods (we'll talk about those later)
+# instance methods are different from class methods (more on those later)
 
 
 class User:

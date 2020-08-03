@@ -11,6 +11,7 @@ class BankAccount:
         return self.balance
 
 user1 = BankAccount("Charlie")
+user2 = BankAccount("Dr. Moneybags")
 
 print(user1.owner, user1.balance)
 
@@ -21,3 +22,10 @@ print(user1.balance)
 user1.withdraw(25)
 
 print(user1.balance)
+
+print(user2.owner, user2.balance)
+
+user2.deposit(10000000.00)
+user2.withdraw(1.5)
+
+print(user2.owner, user2.balance)
