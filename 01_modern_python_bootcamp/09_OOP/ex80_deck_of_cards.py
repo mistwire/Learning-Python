@@ -10,8 +10,9 @@ class Card:
         
     
     def __repr__(self):
-        # pre-3.6 way -> return "{} of {}".format(self.value, self.suit)
-        return f"{self.value} of {self.suit}"
+        # pre-3.6 way -> 
+        return "{} of {}".format(self.value, self.suit)
+        #return f"{self.value} of {self.suit}"
 
 # Deck:
 #   Each instance of Deck  should have a cards attribute with all 52 possible instances of Card .
