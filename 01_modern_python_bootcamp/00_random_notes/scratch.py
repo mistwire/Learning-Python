@@ -16,11 +16,23 @@
 # print(msg)
 
 
-i = 0
-while i < 5:
-    print('*')
-    if i % 2 == 0:
-        print('**')
-    if i > 2:
-        print('***')
-    i = i + 1
+# i = 0
+# while i < 5:
+#     print('*')
+#     if i % 2 == 0:
+#         print('**')
+#     if i > 2:
+#         print('***')
+#     i = i + 1
+
+
+import re 
+
+def validate_pin(pin):
+    match4 = re.search(r'\d{4}', pin)
+    #match6 = re.search(r'\d{6}', pin)
+    if match4: # or match6:
+        return True
+    return False
+
+print(validate_pin('12345'))

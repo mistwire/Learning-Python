@@ -42,3 +42,15 @@ class User:
         return f"Happy {self.age}th, {self.first}"
 
 
+class Moderator(User):
+    def __init__(self, first, last, age, community):
+        super().__init__(first, last, age) # adds first, last & age from User to Moderator
+        self.community = community
+
+    def remove_post(self):
+        return f"{self.full_name} removed a post from the {self.community} community"
+
+
+kim = Moderator("Kim", "Fabre", 47, 'Hair Styling')
+print(kim.full_name())
+print(kim.community)
