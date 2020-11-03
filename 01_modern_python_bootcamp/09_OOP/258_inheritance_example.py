@@ -4,7 +4,7 @@ class User:
 
     @classmethod
     def display_active_users(cls): # cls is the standard, doesn't have to be cls
-        print(cls)
+        # print(cls)
         return f"There are currently {cls.active_users} active users"
 
     @classmethod
@@ -43,14 +43,33 @@ class User:
 
 
 class Moderator(User):
+    total_mods = 0 # Class attribute is defined outside of the class initializor or any methods
+
+    @classmethod
+    def display_active_mods(cls): # cls is the standard, doesn't have to be cls
+        # print(cls)
+        return f"There are currently {cls.total_mods} active moderators"
+    
     def __init__(self, first, last, age, community):
         super().__init__(first, last, age) # adds first, last & age from User to Moderator
         self.community = community
+        Moderator.total_mods += 1
 
     def remove_post(self):
         return f"{self.full_name} removed a post from the {self.community} community"
 
 
+print(User.display_active_users()) # will show 0 active users
+
+u1 = User("Tom", "Garcia", 35)
+
+print(User.display_active_users()) # now 1 active user
+
 kim = Moderator("Kim", "Fabre", 47, 'Hair Styling')
 print(kim.full_name())
 print(kim.community)
+
+print(User.display_active_users()) 
+# This shows 2 active users because the Moderator class calls the user class, which increments the active user number
+
+print(Moderator.display_active_mods())
